@@ -111,7 +111,7 @@ hr {
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    transition: 0.3s;
+    transition: 0.1s;
     font-size: 20px;
 }
 .tab button:hover {
@@ -147,7 +147,8 @@ form label {
     font-size: 14px;
     padding-top: 10px;
 }
-input[type="text"], select {
+input[type="text"],
+select {
     background-color: white;
     width: 49.5%;
     height: 45px;
@@ -159,7 +160,8 @@ input[type="text"], select {
 input[type="checkbox"] {
     border: none;
 }
-select, option:nth-child(1){
+select,
+option:nth-child(1) {
     color: grey;
 }
 .btn-submit {
@@ -180,7 +182,8 @@ select, option:nth-child(1){
     font-weight: 500;
     border-radius: 3px;
 }
-.flex, .flex-row {
+.flex,
+.flex-row {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -195,7 +198,7 @@ form p {
     padding-left: 5px;
     text-align: left;
 }
-.message{
+.message {
     width: 100%;
     line-height: 2.5rem;
     padding-top: 40px;
@@ -204,7 +207,6 @@ form p {
     box-sizing: border-box;
 }
 
-
 /* **************************
  Media query Mobile e tablet 
 ***************************** */
@@ -212,7 +214,8 @@ form p {
     .flex-row {
         flex-direction: column;
     }
-    input[type="text"],select {
+    input[type="text"],
+    select {
         width: 100%;
     }
 }
@@ -242,7 +245,7 @@ form p {
         margin-right: 20px;
     }
 
-    .navbar{
+    .navbar {
         position: absolute;
         width: 300px;
         height: 100%;
@@ -253,9 +256,9 @@ form p {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: right .8s cubic-bezier(1, 0, 0, 1);
+        transition: right 0.8s cubic-bezier(1, 0, 0, 1);
     }
-    .navbar a{
+    .navbar a {
         text-align: center;
     }
     .menu li a {
