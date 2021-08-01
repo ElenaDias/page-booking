@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* ************************* */
+body {
+    background-color: rgb(0, 0, 0);
+}
+header {
+    width: 100%;
+    min-height: 50px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 10px;
+    position: fixed;
+    top: 0;
+}
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+.menu li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.menu li a,
+.menu-book-btn {
+    color: #fff;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+.menu li a {
+    border-radius: 4px;
+}
+.menu a:hover,
+.menu-book-btn:hover {
+    background-color: rgb(255, 216, 13);
+    color: black;
+    cursor: pointer;
+}
+.menu-book-btn {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.hidden {
+    display: none;
+}
+/* *******************  */
+#home {
+    margin-top: 100px;
+}
+#home img {
+    width: 100%;
+    height: auto;
+}
+/* **************** */
+#book-appointment {
+    /* background-color: palevioletred; */
+    width: 95%;
+    margin: auto;
+    min-height: 900px;
+}
+.book-app-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.book-app-title h5 {
+    color: #fff;
+    padding-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+hr {
+    width: 45px;
+    height: 5px;
+    background-color: rgb(255, 216, 13);
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    margin: 8px;
+}
+/*  ******** TAB *************  */
+.tab {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.tab button {
+    width: 50%;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.tab button:hover {
+    background-color: black;
+    color: white;
+}
+.tab button.active {
+    background-color: rgb(255, 216, 13);
+    color: black;
+}
+.tabcontent {
+    min-height: 450px;
+    background-color: rgb(255, 216, 13);
+    display: none;
+    padding: 15px 12px;
+    border-top: none;
+}
+#req-info h3,
+img {
+    text-align: center;
+    display: block;
+    max-width: 80%;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 21px;
+}
+.display {
+    display: block;
+}
+.display p,
+form label {
+    color: black;
+    font-size: 14px;
+    padding-top: 10px;
+}
+input[type="text"], select {
+    background-color: white;
+    width: 49.5%;
+    height: 45px;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    cursor: initial;
+}
+input[type="checkbox"] {
+    border: none;
+}
+select, option:nth-child(1){
+    color: grey;
+}
+.btn-submit {
+    display: block;
+    margin: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 15%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+.btn-submit:hover {
+    border: 3px solid black;
+    background-color: rgb(255, 216, 13);
+    color: black;
+    font-weight: 500;
+    border-radius: 3px;
+}
+.flex, .flex-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-row {
+    flex-direction: row;
+}
+
+form p {
+    padding-left: 5px;
+    text-align: left;
+}
+.message{
+    width: 100%;
+    line-height: 2.5rem;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 50px;
+    box-sizing: border-box;
+}
+
+
+/* **************************
+ Media query Mobile e tablet 
+***************************** */
+@media screen and (max-width: 764px) {
+    .flex-row {
+        flex-direction: column;
+    }
+    input[type="text"],select {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 728px) {
+    .tabcontent {
+        margin-top: -15px;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+    /* NAVBAR RESPONSIVE */
+    nav {
+        display: none;
+    }
+    .hidden {
+        display: block;
+    }
+    .fa,
+    .fas {
+        position: relative;
+        font-weight: 900;
+        font-size: 35px;
+        color: white;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    .menu-book-btn {
+        margin-right: 20px;
+    }
+
+    .navbar{
+        position: absolute;
+        width: 300px;
+        height: 100%;
+        background-color: #000000eb;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: right .8s cubic-bezier(1, 0, 0, 1);
+    }
+    .navbar a{
+        text-align: center;
+    }
+    .menu li a {
+        width: 200px;
+        display: flex;
+        border-radius: 4px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .change {
+        right: 0;
+    }
+}
